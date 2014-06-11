@@ -15,7 +15,7 @@ license=('GPL2')
 groups=('modified')
 makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'uboot-mkimage' 'git')
 options=('!strip')
-source=('linux-sunxi::git+https://github.com/spitsw/linux-sunxi.git#spitsw-3.4.90'
+source=('linux-sunxi::git+https://github.com/spitsw/linux-sunxi.git#branch=spitsw-3.4.90'
         'http://archlinuxarm.org/builder/src/0001-cgroup-add-xattr-support-sunxi.patch'
         'config')
 md5sums=('SKIP'
