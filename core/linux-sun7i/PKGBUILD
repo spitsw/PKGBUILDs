@@ -16,10 +16,8 @@ groups=('modified')
 makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'uboot-mkimage' 'git')
 options=('!strip')
 source=('linux-sunxi::git+https://github.com/spitsw/linux-sunxi.git#branch=spitsw_patwood-3.4.90'
-        'http://archlinuxarm.org/builder/src/0001-cgroup-add-xattr-support-sunxi.patch'
         'config')
 md5sums=('SKIP'
-         '4aa5087e3396f3179b61ccd478e9e604'
          'e2262aa9af955ae1ff9433c434a64226')
 
 prepare() {
@@ -27,7 +25,6 @@ prepare() {
 
   cat "${srcdir}/config" > ./.config
 
-  git apply ../0001-cgroup-add-xattr-support-sunxi.patch
 
   # add pkgrel to extraversion
   sed -ri "s|^(EXTRAVERSION =)(.*)|\1 \2-${pkgrel}|" Makefile
