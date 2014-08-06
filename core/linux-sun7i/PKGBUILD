@@ -8,7 +8,7 @@ _srcname=linux-sunxi
 _kernelname=${pkgbase#linux}
 _desc="sun7i"
 pkgver=3.4.90.spitsy
-pkgrel=5
+pkgrel=6
 arch=('armv7h')
 url="https://github.com/spitsw/linux-sunxi/"
 license=('GPL2')
@@ -18,7 +18,7 @@ options=('!strip')
 source=('linux-sunxi::git+https://github.com/spitsw/linux-sunxi.git#branch=spitsy3-3.4.90'
         'config')
 md5sums=('SKIP'
-         'c791c8720c08d48e085b4e95565b5e30')
+         'a9e1cbd8a8886f15dda65bf58ed81459')
 
 prepare() {
   cd "${srcdir}/${_srcname}"
